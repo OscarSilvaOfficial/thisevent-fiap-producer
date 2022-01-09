@@ -2,7 +2,6 @@ from celery import Celery
 from flask import Flask
 from api.urls import routes
 from flask_restful import Api
-from api.config import DATABASE_URL
 from flask_cors import CORS
 
 def flask_cors(app):
@@ -11,7 +10,6 @@ def flask_cors(app):
 
 def flask_instance(flask=Flask):
   app = flask(__name__)
-  app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
   return app
 
 def flask_restful(app):

@@ -1,1 +1,1 @@
-broker_url = 'amqp://guest@localhost//'
+broker_url = 'amqp://guest@rabbit-local//'
